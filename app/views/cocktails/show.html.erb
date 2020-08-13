@@ -1,0 +1,10 @@
+<div class="container">
+<h1>Here's your cocktail:</h1>
+<p><%= @cocktail.name %></p>
+
+<p>
+<%= link_to 'list all', cocktails_path %> ---
+<%= link_to 'add new', new_cocktail_path %> ---
+<%= link_to 'add a new dose', new_cocktail_dose_path(@cocktail) %>
+</p>
+</div>

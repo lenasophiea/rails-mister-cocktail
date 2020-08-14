@@ -1,21 +1,32 @@
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQoZuDxSMuqP1i46jz99G6m_VFHuc6D7umcUw&usqp=CAU);">
   <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <h1>Discover your <strong>favorite drinks</strong>!</h1>
+    <p>Make your own drinks menu</p>
     <a class="btn btn-flat" href="#">Apply now</a>
   </div>
 </div>
 
 
-
 <div class="container">
-<h1>Here is a list of all cocktails! Pick one!</h1>
-<ul>
 
+
+    <h1>Here is a list of all cocktails! Pick one!</h1>
+  <div class="cards">
   <% @cocktails.each do |cocktail| %>
-  <li> <%= link_to cocktail.name,  cocktail_path(cocktail) %> </li>
+
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://images.pexels.com/photos/109275/pexels-photo-109275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text"> <%= link_to cocktail.name,  cocktail_path(cocktail) %> </p>
+          </div>
+      </div>
+    </div>
+  </div>
+
   <% end %>
+
   <p><%= link_to 'add new', new_cocktail_path %></p>
-</ul>
+  </div>
 </div>

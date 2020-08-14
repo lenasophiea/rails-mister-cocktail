@@ -5,10 +5,10 @@
 <p> <% @cocktail.doses.each do |dose| %>
 <%= dose.ingredient.name  %> <%= dose.description  %> | <%= link_to 'delete', dose, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
+
 </p>
 <p>
-<%= link_to 'list all', cocktails_path %> ---
-<%= link_to 'add new', new_cocktail_path %> ---
+<%= link_to 'list all', cocktails_path %> |
 <%= link_to 'add a new dose', new_cocktail_dose_path(@cocktail) %>
 </p>
 </div>
